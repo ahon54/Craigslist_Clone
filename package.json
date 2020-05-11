@@ -10,15 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoshGlacier/team8craigslist.git"
+    "url": "git+https://github.com/ahon54/Craigslist_Clone.git"
   },
-  "keywords": [],
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoshGlacier/team8craigslist/issues"
+    "url": "https://github.com/ahon54/Craigslist_Clone/issues"
   },
-  "homepage": "https://github.com/JoshGlacier/team8craigslist#readme",
+  "homepage": "https://github.com/ahon54/Craigslist_Clone#readme",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
@@ -42,6 +45,12 @@
     "path": "^0.12.7",
     "util.promisify": "^1.0.1"
   },
+
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
+
   "devDependencies": {
     "nodemon": "^2.0.3"
   }
