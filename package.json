@@ -2,10 +2,9 @@
   "name": "team8craigslist",
   "version": "1.0.0",
   "description": "",
-  "main": "/AdrianComponents/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./AdrianComponents/server.js",
-    "devStart": "nodemon ./AdrianComponents/server.js",
+    "start": "node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
