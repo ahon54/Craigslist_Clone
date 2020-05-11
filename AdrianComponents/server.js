@@ -78,7 +78,7 @@ app.post('/signup', (req, res) => {
   
 })
 
-app.get('/', isAuthenticated, function (req, res) {
+app.get('/', function (req, res) {
   res.render('homepage.ejs');
 })
 
