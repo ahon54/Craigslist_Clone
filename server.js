@@ -7,7 +7,7 @@ const expressLayouts = require('express-ejs-layouts');
 const cors = require('cors');
 const mysqlConnection = require('./connection');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = (process.env.PORT || 3000);
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
@@ -120,7 +120,7 @@ app.delete('/logout', function(req, res) {
   res.redirect('/login')
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, () => {
   console.log(`Server running at port ${port}`)
 })
 
