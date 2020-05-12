@@ -5,11 +5,12 @@ require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 
 
 const mysqlConnection = mysql.createConnection({
-    host : process.env.MYSQL_HOST,
-    user : process.env.MYSQL_USER,
-    password : process.env.MYSQL_PASSWORD,
-    database : process.env.MYSQL_DATABASE,
-    multipleStatements : true
+    host : process.env.DSN,
+    user : process.env.ADMIN,
+    password : process.env.PASSWORD,
+    database : process.env.DATABASE,
+    multipleStatements : true,
+    cloud_sql_instances : process.env.INSTANCE
   });
   
   mysqlConnection.connect((err) => {
