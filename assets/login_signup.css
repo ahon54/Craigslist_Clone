@@ -2,30 +2,26 @@ body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
     position: absolute;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-}
-
-/* Login in */
-.homepage {
-    border-radius: 6px;
-    background-color: #8860EA;
-    color: #ffffff;
-    padding: 10px;
-    /* margin-top: 10px;
-    margin-left: 10px; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    margin: 0;
 }
 
 .login-button {
+    display: flex;
+    justify-content: center;
     border-radius: 6px;
     background-color: #8860EA;
     color: #ffffff;
     padding: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+}
+
+.main-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .login-title {
@@ -47,6 +43,7 @@ main {
     margin: 50px;
 }
 
+
 .login-form {
 
     margin-top: 5%;
@@ -54,67 +51,164 @@ main {
     padding-right: 35%;
 }
 
-/* homepage */
-
-#post_ad {
-    background-color:#8860EA;
-    width:110px;
-    height: 39px;
-    color:white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
+/*  Footer  */
+.text-my-own-color {
+    color: black !important;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
-    font-weight: 100;
-}
-
-/* footer part */
-
-a  {
-    color: black
-}
-
-h3 {
-    font-weight: bolder;
-}
-
-footer{
-    height: 34vh;
-    background-color:#E3DEF0;
+    line-height: 21px;
 }
 
 .centered{
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:#E3DEF0;
+    margin-bottom: 0px;
+    height: 310px;
+    position: absolute;
+    width:100%;
+    padding-top: 30px;
 }
 
-a{
-    text-decoration: none;
+
+.footer-head {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
 }
 
-.myTable{
+.myTable {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 
-.myTable td{
-    text-align: center;
-    vertical-align: top;
+/*  Footer  */
+
+
+.logo{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 
+.login-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.homepage-container {
+    background-color: White;
+    padding: 5px;
+}
+
+.craigslist-container {
+    padding: 10px;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.support-container {
+    padding: 10px;
+}
 
 @media screen and (max-width: 414px) {
 
-    .login-form {
+    body {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        margin-bottom: 50px;
+        margin: 0;
+    }
 
+    .login-button {
+        display: flex;
+        justify-content: center;
         margin-top: 20px;
-        padding-left: 10%;
-        padding-right: 10%;
+    }
+
+    .account_button {
+        background-color:#EE7074;
+        color:white;
+        border-radius: 4px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 100;
+        border-radius: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+        }
+
+    
+    .main-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*  Footer  */
+    .text-my-own-color {
+        color: black !important;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .footer-head {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .centered{
+        display: flex;
+        justify-content: center;
+        background-color:#E3DEF0;
+        margin-bottom: 0px;
+        height: 310px;
+        position: absolute;
+        width:100%;
+        padding-top: 30px;
+    }
+
+    .centered > *{
+        padding: 10px;
+    }
+
+    .myTable {
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    /*  Footer  */
+
+    .login-form {
+        /* display: flex;
+        justify-content: center; */
+        margin-top: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .logo{
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
+        /* max-width: 100%;
+        max-height: 100%; */
+        width: 100%;
+        height: auto;
     }
 
     .homepage-container {
@@ -123,8 +217,19 @@ a{
     }
 
     .login-title {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    .craigslist-container {
+        padding: 10px;
+    }
+
+    .info-container {
+        padding: 10px;
+    }
+
+    .support-container {
+        padding: 10px;
     }
 }
-
-

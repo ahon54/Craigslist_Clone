@@ -1,13 +1,3 @@
-<!-- **********************************Nav**********************************!-->
-<nav>
-    <div class="homepage-container">
-    <button class="homepage" type="button"> Back to homepage </button>
-    </div>
-</nav>
-<!-- **********************************Nav**********************************!-->
-
-
-<!-- **********************************Main**********************************!-->
 <main>
 <div class="main-login">
     <div class="logo-container">
@@ -15,65 +5,64 @@
     </div>
 
     <section class="login-container">
-    <% if (messages.error) { %>
-        <% messages.error %>
-    <% } %>
+
     <form class="login-form" action="/login" method="POST">
         <div class="login-title">
             <h1> Log In </h1>
         </div>
         <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" required>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" required>
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" id="password">
+            <label for="password"></label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleRadios1">Keep me logged in</label>
         </div>
-        <button type="submit" class="login-button">Log In</button>
-        <a href="/signup">Not a member?</a>
+        <div class="main-button-container">
+            <a href="/signup">Not a member?</a>
+            <button type="submit" class="login-button">Log In</button>
+        </div>
     </form>
     </section>
 </div>
 </main>
-<!-- **********************************Main**********************************!-->
 
-<!-- **********************************Footer**********************************!-->
-    <footer class="centered">
-        <table class="myTable">
-            <tr>
-                <td>
-                    <h3>Craigslist</h3>
-                    <a href="aboutus">About Us</a><br>
-                    <br>
-                    <a href="">Careers</a><br>
-                    <br>
-                    <a href="aboutus">Contact Us</a><br>
-                    <br>
-                    <a href="">Forum</a><br>
-                </td>
-                <td>
-                            <h3>Info</h3>
-                    <a href="termsandcondition">Terms & Conditions</a><br>
-                    <br>
-                    <a href="termsandcondition">Privacy Policy</a><br>
-                    <br>
-                    <a href="events">Events</a><br>
-                </td>
-                <td>
-                            <h3>Support</h3>
-                    <a href="">Frauds</a><br>
-                    <br>
-                    <a href="">Tips</a><br>
-                    <br>
-                    <a href="">Q&A</a><br>
-                    <br>
-                    <a href="">Setting</a><br>
-                </td>
-            </tr>
-        </table>
-    </footer>
+<footer class="centered">
+    <div class="myTable">
+        <div class="craigslist-container">
+            <h4 class="footer-head">Craigslist</h4>
+                <br>
+                <a href="aboutus" class="text-my-own-color" >About Us</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Careers</a><br>
+                <br>
+                <a href="aboutus" class="text-my-own-color">Contact Us</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Forum</a><br>
+        </div>
+        <div class="info-container">
+            <h4 class="footer-head">Info</h4>
+                <br>
+                <a href="termsandcondition" class="text-my-own-color">Terms & Conditions</a><br>
+                <br>
+                <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a><br>
+                <br>
+                <a href="events" class="text-my-own-color">Events</a><br>
+        </div>
+        <div class="support-container">
+            <h4 class="footer-head">Support</h4>
+                <br>
+                <a href="" class="text-my-own-color">Frauds</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Tips</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Q&A</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Setting</a><br>
+        </div>
+    </div>
+</footer>
