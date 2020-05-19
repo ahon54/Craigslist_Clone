@@ -1,20 +1,27 @@
 <nav>
     <div class="nav">
-        <img src="/img/logo.png" class="logo" alt="logo">
-            <div class="nav-buttons">
-                <button class="account_button"> 
-                    <div class="wrap"> 
-                        <img src="/img/profile.png" class="account"> 
-                        My Account
-                    </div>
-                </button>
-                <button type="button" class="post_ad"> Post an Ad </button>
-            </div>
-    </div>
+        <div class="logo-container">
+          <a href="/">
+            <img src="/img/logo.png" class="logo" alt="logo">
+          </a>
+        </div>
+        <div class="nav-buttons">
+            <form action="myAccount">
+              <button class="account_button" type="submit"> 
+                  <div class="wrap"> 
+                      <img src="/img/profile.png" class="account"> 
+                      <div class="text"> My Account </div>
+                  </div>
+              </button>
+            </form>
+            <form action="postad">
+              <input type="submit" value="Post an Ad" class="post_add">
+            </form>
+        </div>
 </nav>
 
 <main>
-    <form>
+    <form action="adPreview">
         <div class="post-ad-title">
             <h4> Details </h4>
         </div>
@@ -23,14 +30,6 @@
                 <label for="formGroupExampleInput"></label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
             </div>
-        <!-- <div class="form-row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="$ Price">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Odometer">
-            </div>
-        </div> -->
             <div class="form-group">
                 <label for="formGroupExampleInput"></label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$ Price">
@@ -39,51 +38,6 @@
                 <label for="exampleFormControlTextarea1"></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
             </div>
-        <!-- <div class="form-group">
-            <label for="exampleFormControlSelect1"></label>
-            <select class="custom-select">
-                <option selected>Type</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1"></label>
-            <select class="custom-select">
-                <option selected>Make & Model</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1"></label>
-            <select class="custom-select">
-                <option selected>Cylinders</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-        </div>
-    </div> -->
-<!-- 
-<div class="">
-    <div class="post-ad-container2">
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Gas</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline2">Diesel</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline3">Electronic</label>
-        </div>
-    </div>
-</div> -->
             <div class="upload-container">
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFile">
@@ -92,47 +46,48 @@
             </div>
 
             <div class="button-container">
-                <button type="button" class="button-content">Back</button>
-                <button type="button" class="button-content">Preview</button>
+                <button type="button" class="button-content" onclick="history.back()">Back</button>
+                <button type="submit" class="button-content">Preview</button>
             </div>
         </div>
     </form>
 </main>
 
 <footer class="centered">
-    <table class="myTable">
-        <tr>
-            <td>
-                <h3>Craigslist</h3>
-                <a href="aboutus">About Us</a><br>
+    <div class="myTable">
+        <div class="craigslist-container">
+            <h4 class="footer-head">Craigslist</h4>
                 <br>
-                <a href="">Careers</a><br>
+                <a href="aboutus" class="text-my-own-color" >About Us</a><br>
                 <br>
-                <a href="aboutus">Contact Us</a><br>
+                <a href="" class="text-my-own-color">Careers</a><br>
                 <br>
-                <a href="">Forum</a><br>
-            </td>
-            <td>
-                        <h3>Info</h3>
-                <a href="termsandcondition">Terms & Conditions</a><br>
+                <a href="aboutus" class="text-my-own-color">Contact Us</a><br>
                 <br>
-                <a href="termsandcondition">Privacy Policy</a><br>
+                <a href="" class="text-my-own-color">Forum</a><br>
+        </div>
+        <div class="info-container">
+            <h4 class="footer-head">Info</h4>
                 <br>
-                <a href="events">Events</a><br>
-            </td>
-            <td>
-                        <h3>Support</h3>
-                <a href="">Frauds</a><br>
+                <a href="termsandcondition" class="text-my-own-color">Terms & Conditions</a><br>
                 <br>
-                <a href="">Tips</a><br>
+                <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a><br>
                 <br>
-                <a href="">Q&A</a><br>
+                <a href="events" class="text-my-own-color">Events</a><br>
+        </div>
+        <div class="support-container">
+            <h4 class="footer-head">Support</h4>
                 <br>
-                <a href="">Setting</a><br>
-            </td>
-        </tr>
-    </table>
-  </footer>
+                <a href="" class="text-my-own-color">Frauds</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Tips</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Q&A</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Setting</a><br>
+        </div>
+    </div>
+</footer>
 <script>
     $(".custom-file-input").on("change", function() {
       var fileName = $(this).val().split("\\").pop();

@@ -1,44 +1,37 @@
 <nav>
-    <div class="nav">
-      <div class="nav-logo">
+  <div class="nav">
+    <div class="logo-container">
+      <a href="/">
         <img src="/img/logo.png" class="logo" alt="logo">
-      </div>
-
-      <div class="button-container">
-        <form action="/logout?_method=DELETE" method="POST">
-          <button type="submit"> Log Out</button>
-        </form>
-        <input type="submit" class="account_button" value="My Account">
-        <!-- <div class="wrap">   -->
-          <img src="/img/profile.png" class="account">
-        <!-- </div> -->
-        </input>
-        <!-- <button type="button" class="account_button"> 
-          <div class="wrap">  
-            <img src="/img/profile.png" class="account">
-            <p class="text"> My Account </p>
-          </div>
-        </button> -->
-        <button type="button" class="post_ad">
-          <div class="button-container">
-            <!-- <p class="text"> Post an Ad </p> -->
-          </div>
-        </button>
-      </div>
+      </a>
     </div>
+    <div class="nav-buttons">
+        <form action="myAccount">
+          <button class="account_button" type="submit"> 
+              <div class="wrap"> 
+                  <img src="/img/profile.png" class="account"> 
+                  <div class="text"> My Account </div>
+              </div>
+          </button>
+        </form>
+        <form action="postad">
+          <input type="submit" value="Post an Ad" class="post_add">
+        </form>
+    </div>
+</div>
 
     <div class="sub-nav">
         <div class="form-input">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
         </div>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Country
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Canada</a>
+              <a class="dropdown-item" href="#">United States</a>
+              <a class="dropdown-item" href="#">Mexico</a>
             </div>
           </div>
         
@@ -84,90 +77,203 @@
 
       <div class="feature-listing">
           <h2>Feature Listing</h2>
+
+          <div class="row">
+            <div class="column">
+              <img src="img/jeep_ad.jpg" alt="Snow" style="width:100%" class="column-add">
+              <p class="description"> Car </p>
+              <p class="price"> $57,000 </p>
+            </div>
+            <div class="column">
+              <img src="img/nissan.jpg" alt="Forest" style="width:100%" class="column-add">
+              <p class="description"> Car </p>
+              <p class="price"> $57,000 </p>
+            </div>
+            <div class="column">
+              <img src="img/mini.jpg" alt="Mountains" style="width:100%" class="column-add">
+              <p class="description"> Car </p>
+              <p class="price"> $57,000 </p>
+            </div>
+          </div>
+
       </div>
 
       <div class="feature-container">
           <div class="for-sale-container">
-            <h6> For Sale </h6>
-              <a href="">Appliances</a>
-              <a href="">Arts & Crafts</a>
-              <a href="">Atv/Utv/Sno</a>
-              <a href="">Auto parts</a>
-              <a href="">Aviation</a>
-              <a href="">Baby + Kid</a>
-              <a href="">Beauty & Health</a>
-              <a href="">Bikes</a>
-              <a href="">Boats</a>
-              <a href="">Books</a>
-              <a href="">Cars + Trucks</a>
-              <a href="">Cds/Dvds/Vhs</a>
-              <a href="">Cell Phones</a>
-              <a href="">Clothing</a>
-              <a href="">Collectibles</a>
-              <a href="">Computers</a>
-              <a href="">Electronics</a>
-              <a href="">Farm & Garden</a>
-              <a href="">Furniture</a>
+            <h4 class="section-title"> For Sale </h4>
+            <div class="section-layer">
+              <div class="section1-list">
+                <a href="selectionPage" class="list-text">Appliances</a>
+                <br>
+                <a href="selectionPage" class="list-text">Arts & Crafts</a>
+                <br>
+                <a href="selectionPage" class="list-text">Atv/Utv/Sno</a>
+                <br>
+                <a href="selectionPage" class="list-text">Auto parts</a>
+                <br>
+                <a href="selectionPage" class="list-text">Aviation</a>
+                <br>
+                <a href="selectionPage" class="list-text">Baby + Kid</a>
+                <br>
+                <a href="selectionPage" class="list-text">Beauty & Health</a>
+                <br>
+                <a href="selectionPage" class="list-text">Bikes</a>
+                <br>
+                <a href="selectionPage" class="list-text">Boats</a>
+                <br>
+                <a href="selectionPage" class="list-text">Books</a>
+                <br>
+
+              </div>
+              <div class="section2-list">
+                <a href="selectionPage" class="list-text">Cars + Trucks</a>
+                <br>
+                <a href="selectionPage" class="list-text">Cds/Dvds/Vhs</a>
+                <br>
+                <a href="selectionPage" class="list-text">Cell Phones</a>
+                <br>
+                <a href="selectionPage" class="list-text">Clothing</a>
+                <br>
+                <a href="selectionPage" class="list-text">Collectibles</a>
+                <br>
+                <a href="selectionPage" class="list-text">Computers</a>
+                <br>
+                <a href="selectionPage" class="list-text">Electronics</a>
+                <br>
+                <a href="selectionPage" class="list-text">Farm & Garden</a>
+                <br>
+                <a href="selectionPage" class="list-text">Furniture</a>
+                <br>
+              </div>
+            </div>
           </div>
           <div class="community-container">
-            <h6> Community </h6>
-            <a href="">Activities</a>
-            <a href="">Artists</a>
-            <a href="">Childcare</a>
-            <a href="">Classes</a>
-            <a href="">Events</a>
-            <a href="">Local News</a>
-            <a href="">Lost & Found</a>
-            <a href="">Musicians</a>
-            <a href="">Pets</a>
-            <a href="">Politics</a>
-            <a href="">Rideshare</a>
-            <a href="">Volunteers</a>
+            <h4 class="section-title"> Community </h4>
+            <div class="section-layer">
+              <div class="section1-list">
+                <a href="selectionPage" class="list-text">Activities</a>
+                <br>
+                <a href="selectionPage" class="list-text">Artists</a>
+                <br>
+                <a href="selectionPage" class="list-text">Childcare</a>
+                <br>
+                <a href="selectionPage" class="list-text">Classes</a>
+                <br>
+                <a href="selectionPage" class="list-text">Events</a>
+                <br>
+                <a href="selectionPage" class="list-text">Local News</a>
+                <br>
+                <a href="selectionPage" class="list-text">Lost & Found</a>
+                <br>
+                <a href="selectionPage" class="list-text">Musicians</a>
+                <br>
+                <a href="selectionPage" class="list-text">Pets</a>
+                <br>
+                <a href="selectionPage" class="list-text">Politics</a>
+                <br>
+              </div>
+              <div class="section2-list">
+                <a href="selectionPage" class="list-text">Rideshare</a>
+                <br>
+                <a href="selectionPage" class="list-text">Volunteers</a>
+                <br>
+              </div>
+            </div>
           </div>
           <div class="housing-container">
-            <h6> Housing </h6>
-            <a href="">Apartments</a>
-            <a href="">Commercial</a>
-            <a href="">Housing</a>
-            <a href="">Housing Swap</a>
-            <a href="">Housing Wanted</a>
-            <a href="">Office</a>
-            <a href="">Parking</a>
-            <a href="">Real Estate</a>
-            <a href="">Storage</a>
-            <a href="">Shared Rooms</a>
-            <a href="">Rooms Wanted</a>
-            <a href="">Temporary</a>
-            <a href="">Vacation</a>
-          </div>
+            <h4 class="section-title"> Housing </h4>
+            <div class="section-layer">
+              <div class="section1-list">
+                <a href="selectionPage" class="list-text">Apartments</a>
+                <br>
+                <a href="selectionPage" class="list-text">Commercial</a>
+                <br>
+                <a href="selectionPage" class="list-text">Housing</a>
+                <br>
+                <a href="selectionPage" class="list-text">Housing Swap</a>
+                <br>
+                <a href="selectionPage" class="list-text">Housing Wanted</a>
+                <br>
+                <a href="selectionPage" class="list-text">Office</a>
+                <br>
+                <a href="selectionPage" class="list-text">Parking</a>
+                <br>
+                <a href="selectionPage" class="list-text">Real Estate</a>
+                <br>
+                <a href="selectionPage" class="list-text">Storage</a>
+                <br>
+                <a href="selectionPage" class="list-text">Shared Rooms</a>
+                <br>
+              </div>
+              <div class="section2-list">
+                <a href="selectionPage" class="list-text">Rooms Wanted</a>
+                <br>
+                <a href="selectionPage" class="list-text">Temporary</a>
+                <br>
+                <a href="selectionPage" class="list-text">Vacation</a>
+                <br>
+              </div>
+            </div>
+        </div>
           <div class="services-container">
-            <h6> Services </h6>
-                <a href="">Automotive</a>
-                <a href="">Beauty</a>
-                <a href="">Electronic</a>
-                <a href="">Farm & Garden</a>
-                <a href="">Financial</a>
-                <a href="">Household</a>
-                <a href="">Labor</a>
-                <a href="">Legal</a>
-                <a href="">Lessons</a>
-                <a href="">Real Estate</a>
+            <h4 class="section-title"> Services </h4>
+            <div class="section-layer">
+              <div class="section1-list">
+                <a href="selectionPage" class="list-text">Automotive</a>
+                <br>
+                <a href="selectionPage" class="list-text">Beauty</a>
+                <br>
+                <a href="selectionPage" class="list-text">Electronic</a>
+                <br>
+                <a href="selectionPage" class="list-text">Farm & Garden</a>
+                <br>
+                <a href="selectionPage" class="list-text">Financial</a>
+                <br>
+                <a href="selectionPage" class="list-text">Household</a>
+                <br>
+                <a href="selectionPage" class="list-text">Labor</a>
+                <br>
+                <a href="selectionPage" class="list-text">Legal</a>
+                <br>
+                <a href="selectionPage" class="list-text">Lessons</a>
+                <br>
+                <a href="selectionPage" class="list-text">Real Estate</a>
+                <br>
+              </div>
+            </div>
           </div>
           <div class="jobs-container">
-            <h6> Jobs </h6>
-            <a href="">Accounting</a>
-            <a href="">Architecture</a>
-            <a href="">Art / Design</a>
-            <a href="">Business</a>
-            <a href="">Customer Service</a>
-            <a href="">Education</a>
-            <a href="">Engineering</a>
-            <a href="">Fitness / Food</a>
-            <a href="">General Labor</a>
-            <a href="">Government</a>
-            <a href="">Human Resources</a>
-            <a href="">Legal</a>
-          </div>
+            <h4 class="section-title"> Jobs </h4>
+            <div class="section-layer">
+              <div class="section1-list">
+                <a href="selectionPage" class="list-text">Accounting</a>
+                <br>
+                <a href="selectionPage" class="list-text">Architecture</a>
+                <br>
+                <a href="selectionPage" class="list-text">Art / Design</a>
+                <br>
+                <a href="selectionPage" class="list-text">Business</a>
+                <br>
+                <a href="selectionPage" class="list-text">Customer Service</a>
+                <br>
+                <a href="selectionPage" class="list-text">Education</a>
+                <br>
+                <a href="selectionPage" class="list-text">Engineering</a>
+                <br>
+                <a href="selectionPage" class="list-text">Fitness / Food</a>
+                <br>
+                <a href="selectionPage" class="list-text">General Labor</a>
+                <br>
+                <a href="selectionPage" class="list-text">Government</a>
+                <br>
+              </div>
+              <div class="section2-list">
+                <a href="selectionPage" class="list-text">Human Resources</a>
+                <br>
+                <a href="selectionPage" class="list-text">Legal</a>
+                <br>
+              </div>
+            </div>
         </div>
 </main>
 <footer class="centered">
@@ -195,13 +301,13 @@
       <div class="support-container">
           <h4 class="footer-head">Support</h4>
               <br>
-              <a href="" class="text-my-own-color">Frauds</a><br>
+              <a href="selectionPage" class="text-my-own-color">Frauds</a><br>
               <br>
-              <a href="" class="text-my-own-color">Tips</a><br>
+              <a href="selectionPage" class="text-my-own-color">Tips</a><br>
               <br>
-              <a href="" class="text-my-own-color">Q&A</a><br>
+              <a href="selectionPage" class="text-my-own-color">Q&A</a><br>
               <br>
-              <a href="" class="text-my-own-color">Setting</a><br>
+              <a href="selectionPage" class="text-my-own-color">Setting</a><br>
       </div>
   </div>
 </footer>

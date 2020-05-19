@@ -1,21 +1,30 @@
-
 <nav>
     <div class="nav">
-        <img src="/img/logo.png" class="logo" alt="logo">
-            <div class="nav-buttons">
-                <button class="account_button"> 
-                    <div class="wrap"> 
-                        <img src="/img/profile.png" class="account"> 
-                        <div class="text"> My Account </div>
-                    </div>
-                </button>
-                <button class="post_ad"> Post an Ad </button>
-            </div>
+        <div class="logo-container">
+          <a href="/">
+            <img src="/img/logo.png" class="logo" alt="logo">
+          </a>
+        </div>
+        <div class="nav-buttons">
+            <form action="myAccount">
+              <button class="account_button" type="submit"> 
+                  <div class="wrap"> 
+                      <img src="/img/profile.png" class="account"> 
+                      <div class="text"> My Account </div>
+                  </div>
+              </button>
+            </form>
+            <form action="postad">
+              <input type="submit" value="Post an Ad" class="post_add">
+            </form>
+        </div>
     </div>
 </nav>
 <main>
-    <div class="about-us-img">
-        <img src="/img/iphone_ad.jpg" class="iphone-img">
+    <div class="about-us-container">
+        <div class="about-us-img">
+            <img src="/img/iphone_ad.jpg" class="iphone-img">
+        </div>
     </div>
 
     <div class="about-us-container">
@@ -45,36 +54,37 @@
 </main>
 
 <footer class="centered">
-    <table class="myTable">
-        <tr>
-            <td>
-                <h3>Craigslist</h3>
-                <a href="aboutus">About Us</a><br>
+    <div class="myTable">
+        <div class="craigslist-container">
+            <h4 class="footer-head">Craigslist</h4>
                 <br>
-                <a href="">Careers</a><br>
+                <a href="aboutus" class="text-my-own-color" >About Us</a><br>
                 <br>
-                <a href="aboutus">Contact Us</a><br>
+                <a href="" class="text-my-own-color">Careers</a><br>
                 <br>
-                <a href="">Forum</a><br>
-            </td>
-            <td>
-                        <h3>Info</h3>
-                <a href="termsandcondition">Terms & Conditions</a><br>
+                <a href="aboutus" class="text-my-own-color">Contact Us</a><br>
                 <br>
-                <a href="termsandcondition">Privacy Policy</a><br>
+                <a href="" class="text-my-own-color">Forum</a><br>
+        </div>
+        <div class="info-container">
+            <h4 class="footer-head">Info</h4>
                 <br>
-                <a href="events">Events</a><br>
-            </td>
-            <td>
-                        <h3>Support</h3>
-                <a href="">Frauds</a><br>
+                <a href="termsandcondition" class="text-my-own-color">Terms & Conditions</a><br>
                 <br>
-                <a href="">Tips</a><br>
+                <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a><br>
                 <br>
-                <a href="">Q&A</a><br>
+                <a href="events" class="text-my-own-color">Events</a><br>
+        </div>
+        <div class="support-container">
+            <h4 class="footer-head">Support</h4>
                 <br>
-                <a href="">Setting</a><br>
-            </td>
-        </tr>
-    </table>
-  </footer>
+                <a href="" class="text-my-own-color">Frauds</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Tips</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Q&A</a><br>
+                <br>
+                <a href="" class="text-my-own-color">Setting</a><br>
+        </div>
+    </div>
+</footer>

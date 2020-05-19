@@ -76,7 +76,7 @@ app.post('/signup', (req, res) => {
   const name = req.body.name
   const lastname = req.body.lastname
   const email = req.body.email
-  
+  const password = req.body.password
 })
 
 app.get('/', isAuthenticated, function (req, res) {
@@ -95,20 +95,24 @@ app.get('/events', function(req,res) {
   res.render('events.ejs');
 })
 
-app.get('/postad', function(req, res) {
+app.get('/postad', isAuthenticated, function(req, res) {
   res.render('postad.ejs');
 })
 
-app.get('/postad/continuePostAd', function(req, res) {
+app.get('/continuePostAd', isAuthenticated, function(req, res) {
   res.render('continuePostAd.ejs');
 })
 
-app.get('/adPreview', function(req, res) {
+app.get('/adPreview', isAuthenticated, function(req, res) {
   res.render('adPreview.ejs');
 })
 
-app.get('/selectionPage', function(req, res) {
+app.get('/selectionPage', isAuthenticated, function(req, res) {
   res.render('selectionPage.ejs');
+})
+
+app.get('/myAccount', isAuthenticated, function(req, res) {
+  res.render('myAccount.ejs')
 })
 
 app.get('/posts', function(req, res) {
