@@ -6,7 +6,7 @@
           </a>
         </div>
         <div class="nav-buttons">
-            <form action="myAccount">
+            <form action="/myAccount" method="GET">
               <button class="account_button" type="submit"> 
                   <div class="wrap"> 
                       <img src="/img/profile.png" class="account"> 
@@ -14,7 +14,7 @@
                   </div>
               </button>
             </form>
-            <form action="postad">
+            <form action="/postad" method="GET">
               <input type="submit" value="Post an Ad" class="post_add">
             </form>
         </div>
@@ -26,11 +26,12 @@
         <h4> My Account </h4>
     </div>
 
+
     <div class="whole-posting-container">
         <div class="profile-container">
             <div class="profile">
                 <img src="img/profile_pic.png" class="profile_pic">
-                <p class="profile-name"> Toby Andres </p>
+                <p class="profile-name">  <%= user.name %> <%= user.lastname %> </p>
 
                 <div class="stars"> 
                     <img src="img/star.png" class="star_size"> 

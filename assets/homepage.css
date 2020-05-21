@@ -3,6 +3,34 @@ body {
     width: 100%;
 }
 
+/*    Ad Preview     */
+
+.column .column-add-preview {
+    height: 400px;
+}
+
+.location-title {
+    color: lightgray !important;
+}
+
+.favourite_button {
+    background-color:#EE7074;
+    color:white;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 100%;
+    height: 30px;
+}
+
+.favourite_icon {
+    color: white;
+}
+
 /*    My Accoount    */
 
 .profile-container {
@@ -102,6 +130,11 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+}
+
+.preview-section2 {
+    display: flex;
+    align-self: center;
 }
 
 /*    post ad continue */

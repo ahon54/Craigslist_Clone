@@ -62,7 +62,32 @@ const login = ({email , password}) => {
 }
 
 const signup = ({username, lastname, email, password}) => {
-    
+    return new Promise ((resolve, reject) => {
+        bcrypt.hash(password, 10, function(err, hash) {
+            mysqlConnection.getUsersSignUp(username , lastname , hash , email , (err, results) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(results)
+                }
+            })
+        });
+        
+    })
+}
+
+const createPost = ({location_id , ad_id , item_category_id, title, price, condition, description, picture, method_of_payment, method_of_communication, negotiable, user_id}) => {
+
+    // location_id, ad_id, item_category_id, title, price, description, condition, picture, user_id,
+    return new Promise ((resolve, reject) => {
+        mysqlConnection.createPost(location_id , ad_id , item_category_id, title, price, description ,condition, picture, method_of_payment, method_of_communication, negotiable, user_id, (err, result) => {
+            if (err) {
+                reject(err)
+            } else {
+                resolve()
+            }
+        })
+    })
 }
 
 
@@ -71,4 +96,4 @@ const signup = ({username, lastname, email, password}) => {
 
 
 
-module.exports = { isAuthenticated, login };
+module.exports = { isAuthenticated, login, signup, createPost};

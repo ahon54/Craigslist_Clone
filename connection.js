@@ -23,7 +23,7 @@ const mysqlConnection = mysql.createConnection({
   })
 
 function getUsersSignUp(username, lastname, password, email, callback) {
-  const sql = `INSERT into USERS (username, lastname, password, email) VALUES ("${username}", "${lastname}", "${password}", "${email}");`
+  const sql = `INSERT into users (name, lastname, password, email) VALUES ("${username}", "${lastname}", "${password}", "${email}");`
   mysqlConnection.query(sql , callback)
 }
 
@@ -32,12 +32,21 @@ function getUserLogin(email , callback) {
   mysqlConnection.query(sql , callback)
 }
 
-function createUser(username, lastname, email, password, callback) {
-  const sql = ``
+function getUserName(name, callback) {
+  const sql = `SELECT * FROM users WHERE name = "${name}"`
   mysqlConnection.query(sql, callback)
 }
 
-module.exports = { mysqlConnection, getUsersSignUp, getUserLogin};
+function getUserPost() {
+
+}
+
+function createPost(location_id , ad_id , item_category_id, title, price, description ,condition, picture, method_of_payment, method_of_communication, negotiable, user_id, callback) {
+  const sql = "INSERT into post (location_id, ad_id, item_category_id, title, price, `condition`, description, user_id, method_of_payment, method_of_communication, negotiable) VALUES " + ` ("${location_id}","${ad_id}","${item_category_id}","${title}","${price}","${condition}","${description}",${user_id},"${method_of_payment}","${method_of_communication}","${negotiable}")`
+  mysqlConnection.query(sql, callback)
+}
+
+module.exports = { mysqlConnection, getUsersSignUp, getUserLogin, createPost, getUserName};
 
 
 

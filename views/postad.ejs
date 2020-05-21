@@ -25,32 +25,71 @@
     <div class="post-ad-title">
         <h4> Post an Ad </h4>
     </div>
-    <form class="ad-form" action="continuePostAd">
+    <form class="ad-form" action="/continuePostAd" method="GET">
     <div class="post-ad-container">
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Location</label>
                 <select class="custom-select" name="location_id" required>
                     <option selected>Province</option>
-                    <option value="1">Canada</option>
-                    <option value="2">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="US">United States</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">What kind of ad are you posting?</label>
                 <select class="custom-select" name="ad_id" required>
                     <option selected>Type of Ad</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Business">Business</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">What are you selling?</label>
                 <select class="custom-select" name="item_category_id" required>
                     <option selected>Category</option>
-                    <option value="1">Electronic</option>
-                    <option value="2">Kitchen</option>
-                    <option value="3">Clothes</option>
+                    <option value="Jewelry">Jewelry</option>
+                    <option value="House">House</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Cell Phone">Cell Phone</option>
+                    <option value="Food">Food</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">What is the condition?</label>
+                <select class="custom-select" name="condition" required>
+                    <option selected>Category</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Very Bad">Very Bad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Prefer method of payment?</label>
+                <select class="custom-select" name="method_of_payment" required>
+                    <option selected>Category</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Cheque">Cheque</option>
+                    <option value="E-transfer">E-transfer</option>
+                    <option value="Cryptocurrency">cryptocurrency</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Best way of communication?</label>
+                <select class="custom-select" name="method_of_communication" required>
+                    <option selected>Category</option>
+                    <option value="Message on craigslist">Message on craigslist</option>
+                    <option value="Phone">Phone</option>
+                    <option value="E-mail">E-mail</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Negotiable?</label>
+                <select class="custom-select" name="negotiable" required>
+                    <option selected>Category</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
             </div>
     </div>

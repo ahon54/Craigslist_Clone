@@ -18,6 +18,8 @@ const cookieParser = require('cookie-parser')
 
 const login = require('./routes/index').login
 const isAuthenticated = require('./routes/index').isAuthenticated
+const signup = require('./routes/index').signup
+const createPost = require('./routes/index').createPost
 
 const initializePassport = require('./passport-config')
 initializePassport(
@@ -73,10 +75,15 @@ app.get('/signup', function(req, res) {
 });
 
 app.post('/signup', (req, res) => {
-  const name = req.body.name
+  const username = req.body.username
   const lastname = req.body.lastname
   const email = req.body.email
   const password = req.body.password
+  signup({username, lastname, email, password})
+  .then(result => {
+    res.redirect('/')
+  })
+  .catch(e => console.log(e))
 })
 
 app.get('/', isAuthenticated, function (req, res) {
@@ -100,28 +107,50 @@ app.get('/postad', isAuthenticated, function(req, res) {
 })
 
 app.get('/continuePostAd', isAuthenticated, function(req, res) {
-  res.render('continuePostAd.ejs');
+  let location_id = req.query.location_id
+  let ad_id = req.query.ad_id
+  let item_category_id = req.query.item_category_id
+  let condition = req.query.condition
+  let method_of_communication = req.query.method_of_communication
+  let method_of_payment = req.query.method_of_payment
+  let negotiable = req.query.negotiable
+  res.render('continuePostAd.ejs', { location_id, ad_id, item_category_id, condition, method_of_payment, method_of_communication, negotiable });
 })
 
 app.get('/adPreview', isAuthenticated, function(req, res) {
-  res.render('adPreview.ejs');
+  const { location_id , ad_id , item_category_id, title, price, condition, description, picture, method_of_payment, method_of_communication, negotiable } = req.query
+  res.render('adPreview.ejs', { location_id , ad_id , item_category_id, title, price, condition, description, picture,method_of_payment, method_of_communication, negotiable });
+})
+
+app.post('/adPreview', isAuthenticated, function(req, res) {
+  createPost({...req.body, user_id: req.user.id})
+  .then(result => {
+    res.redirect('/selectionPage')
+  })
+  .catch(e => console.log(e))
 })
 
 app.get('/selectionPage', isAuthenticated, function(req, res) {
   res.render('selectionPage.ejs');
 })
 
+app.post('/selectionPage', isAuthenticated, function(req, res) {
+  res.render('selectionPage.ejs', { location_id , ad_id , item_category_id, title, price, condition, description, picture,method_of_payment, method_of_communication, negotiable })
+})
+
 app.get('/myAccount', isAuthenticated, function(req, res) {
-  res.render('myAccount.ejs')
+  const { name, lastname, location_id , ad_id , item_category_id, title, price, description, picture } = req.query
+  res.render('myAccount', { user: req.user});
 })
 
 app.get('/posts', function(req, res) {
-  res.json(posts.filter(post => post.username === req.user.name ));
+  res.json(posts.filter(post => post.username === req.user.name));
 })
+
 
 app.delete('/logout', function(req, res) {
   req.logOut()
-  res.redirect('/login')
+  res.redirect('/login' )
 })
 
 app.listen(port, () => {
