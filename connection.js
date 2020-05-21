@@ -10,6 +10,11 @@ const mysqlConnection = mysql.createConnection({
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
   cloud_sql_instances: process.env.INSTANCE,
+  ssl: {
+    ca: process.env.server_ca.replace(/\\n/g, "\n"),
+    cert: process.env.client_cert.replace(/\\n/g, "\n"),
+    key: process.env.client_key.replace(/\\n/g, "\n"),
+  },
 });
 
 mysqlConnection.connect((err) => {
