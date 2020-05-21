@@ -37,16 +37,18 @@ function getUserName(name, callback) {
   mysqlConnection.query(sql, callback)
 }
 
-function getUserPost() {
-
-}
-
 function createPost(location_id , ad_id , item_category_id, title, price, description ,condition, picture, method_of_payment, method_of_communication, negotiable, user_id, callback) {
   const sql = "INSERT into post (location_id, ad_id, item_category_id, title, price, `condition`, description, user_id, method_of_payment, method_of_communication, negotiable) VALUES " + ` ("${location_id}","${ad_id}","${item_category_id}","${title}","${price}","${condition}","${description}",${user_id},"${method_of_payment}","${method_of_communication}","${negotiable}")`
   mysqlConnection.query(sql, callback)
 }
 
-module.exports = { mysqlConnection, getUsersSignUp, getUserLogin, createPost, getUserName};
+function getUserPost(userId, callback) {
+  const sql = `SELECT * FROM post WHERE user_id = "${userId.userId}"`
+  mysqlConnection.query(sql, callback)
+}
+
+
+module.exports = { mysqlConnection, getUsersSignUp, getUserName, getUserLogin, createPost, getUserPost};
 
 
 

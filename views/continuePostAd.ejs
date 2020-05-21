@@ -1,105 +1,176 @@
 <nav>
-    <div class="nav">
-        <div class="logo-container">
-          <a href="/">
-            <img src="/img/logo.png" class="logo" alt="logo">
-          </a>
-        </div>
-        <div class="nav-buttons">
-            <form action="myAccount">
-              <button class="account_button" type="submit"> 
-                  <div class="wrap"> 
-                      <img src="/img/profile.png" class="account"> 
-                      <div class="text"> My Account </div>
-                  </div>
-              </button>
-            </form>
-            <form action="postad">
-              <input type="submit" value="Post an Ad" class="post_add">
-            </form>
-        </div>
+  <div class="nav">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/img/logo.png" class="logo" alt="logo" />
+      </a>
+    </div>
+    <div class="nav-buttons">
+      <form action="myAccount">
+        <button class="account_button" type="submit">
+          <div class="wrap">
+            <img src="/img/profile.png" class="account" />
+            <div class="text">My Account</div>
+          </div>
+        </button>
+      </form>
+      <form action="postad">
+        <input type="submit" value="Post an Ad" class="post_add" />
+      </form>
+    </div>
+  </div>
 </nav>
 
 <main>
-    <form action="/adPreview" method="GET">
-        <div class="post-ad-title">
-            <h4> Details </h4>
+  <form action="/adPreview" method="GET">
+    <div class="post-ad-title">
+      <h4>Details</h4>
+    </div>
+    <div class="post-ad-container">
+      <div class="form-group">
+        <label for="formGroupExampleInput"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="Title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="$ Price"
+          name="price"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"></label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          placeholder="Description"
+          name="description"
+        ></textarea>
+      </div>
+      <div class="upload-container">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            id="customFile"
+            name="picture"
+            multiple
+          />
+          <label class="custom-file-label" for="customFile">Upload Image</label>
         </div>
-        <div class="post-ad-container">
-            <div class="form-group">
-                <label for="formGroupExampleInput"></label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title" name="title">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput"></label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$ Price" name="price">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description" name="description"></textarea>
-            </div>
-            <div class="upload-container">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile" name="picture">
-                    <label class="custom-file-label" for="customFile">Upload Image</label>
-                </div>
-            </div>
+      </div>
 
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= location_id %>" name="location_id">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= ad_id %>" name="ad_id">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= item_category_id %>" name="item_category_id">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= condition %>" name="condition">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= method_of_payment %>" name="method_of_payment">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= method_of_communication %>" name="method_of_communication">
-            <input type="hidden" class="form-control" id="formGroupExampleInput" value="<%= negotiable %>" name="negotiable">
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= location_id %>"
+        name="location_id"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= ad_id %>"
+        name="ad_id"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= item_category_id %>"
+        name="item_category_id"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= condition %>"
+        name="condition"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= method_of_payment %>"
+        name="method_of_payment"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= method_of_communication %>"
+        name="method_of_communication"
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        id="formGroupExampleInput"
+        value="<%= negotiable %>"
+        name="negotiable"
+      />
 
-
-            <div class="button-container">
-                <button type="button" class="button-content" onclick="history.back()">Back</button>
-                <button type="submit" class="button-content">Preview</button>
-            </div>
-        </div>
-    </form>
+      <div class="button-container">
+        <button type="button" class="button-content" onclick="history.back()">
+          Back
+        </button>
+        <button type="submit" class="button-content">Preview</button>
+      </div>
+    </div>
+  </form>
 </main>
 
 <footer class="centered">
-    <div class="myTable">
-        <div class="craigslist-container">
-            <h4 class="footer-head">Craigslist</h4>
-                <br>
-                <a href="aboutus" class="text-my-own-color" >About Us</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Careers</a><br>
-                <br>
-                <a href="aboutus" class="text-my-own-color">Contact Us</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Forum</a><br>
-        </div>
-        <div class="info-container">
-            <h4 class="footer-head">Info</h4>
-                <br>
-                <a href="termsandcondition" class="text-my-own-color">Terms & Conditions</a><br>
-                <br>
-                <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a><br>
-                <br>
-                <a href="events" class="text-my-own-color">Events</a><br>
-        </div>
-        <div class="support-container">
-            <h4 class="footer-head">Support</h4>
-                <br>
-                <a href="" class="text-my-own-color">Frauds</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Tips</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Q&A</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Setting</a><br>
-        </div>
+  <div class="myTable">
+    <div class="craigslist-container">
+      <h4 class="footer-head">Craigslist</h4>
+      <br />
+      <a href="aboutus" class="text-my-own-color">About Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Careers</a><br />
+      <br />
+      <a href="aboutus" class="text-my-own-color">Contact Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Forum</a><br />
     </div>
+    <div class="info-container">
+      <h4 class="footer-head">Info</h4>
+      <br />
+      <a href="termsandcondition" class="text-my-own-color"
+        >Terms & Conditions</a
+      ><br />
+      <br />
+      <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a
+      ><br />
+      <br />
+      <a href="events" class="text-my-own-color">Events</a><br />
+    </div>
+    <div class="support-container">
+      <h4 class="footer-head">Support</h4>
+      <br />
+      <a href="" class="text-my-own-color">Frauds</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Tips</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Q&A</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Setting</a><br />
+    </div>
+  </div>
 </footer>
 <script>
-    $(".custom-file-input").on("change", function() {
-      var fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
+  //   $(".custom-file-input").on("change", function () {
+  //     var fileName = $(this).val().split("\\").pop();
+  //     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+  //   });
 </script>

@@ -90,10 +90,21 @@ const createPost = ({location_id , ad_id , item_category_id, title, price, condi
     })
 }
 
+const getUserPost = ({userId}) => {
+    return new Promise ((resolve, reject) => {
+        mysqlConnection.getUserPost(userId, (err, result) => {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(result)
+            }
+        })
+    })
+} 
 
 
 
 
 
 
-module.exports = { isAuthenticated, login, signup, createPost};
+module.exports = { isAuthenticated, login, signup, createPost, getUserPost};
