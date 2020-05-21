@@ -12,7 +12,7 @@ const s3 = new aws.S3();
 exports.upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "//create a bucket and name",
+    bucket: "craigslist.bucket",
     key: function (req, file, cb) {
       cb(null, file.originalname);
     },

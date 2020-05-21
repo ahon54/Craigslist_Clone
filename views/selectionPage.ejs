@@ -49,24 +49,31 @@
 </nav>
 
 <main>
-  <% posts.forEach(post => { %>
-  <div class="user-product-image">
-    <div class="user-row">
-      <div class="user-column">
-        <img
-          src="img/jeep_ad.jpg"
-          alt="Snow"
-          style="width: 100%;"
-          class="column-add-preview"
-        />
-        <div class="user-detail-container">
-          <p class="user-price">Price: <%= post.price %></p>
-          <p class="user-user">Seller: <%= current_user.name %></p>
+  <div class="main-selection-page-container">
+    <div class="selection-page-container">
+      <% posts.forEach(post => { %>
+      <div class="user-product-selection-image">
+        <div class="user-row">
+          <div class="user-column">
+            <a href="product">
+              <img
+                src="img/jeep_ad.jpg"
+                alt="Snow"
+                style="width: 100%;"
+                class="column-add-preview"
+              />
+            </a>
+            <div class="user-detail-container">
+              <p class="user-user"><%= post.title %></p>
+              <p class="user-price">Price: <%= post.price %></p>
+              <p class="user-user">Seller: <%= current_user.name %></p>
+            </div>
+          </div>
         </div>
       </div>
+      <% }) %>
     </div>
   </div>
-  <% }) %>
 
   <button type="button" class="see-more-text">View more</button>
 </main>

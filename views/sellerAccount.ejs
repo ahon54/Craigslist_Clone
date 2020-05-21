@@ -1,0 +1,113 @@
+<nav>
+  <div class="nav">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/img/logo.png" class="logo" alt="logo" />
+      </a>
+    </div>
+    <div class="nav-buttons">
+      <form action="/myAccount" method="GET">
+        <button class="account_button" type="submit">
+          <div class="wrap">
+            <img src="/img/profile.png" class="account" />
+            <div class="text">My Account</div>
+          </div>
+        </button>
+      </form>
+      <form action="/postad" method="GET">
+        <input type="submit" value="Post an Ad" class="post_add" />
+      </form>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="post-ad-title">
+    <h4>Seller Account</h4>
+  </div>
+  <div class="user-account-posting-container">
+    <div class="user-whole-posting-container">
+      <div class="profile-container">
+        <div class="profile">
+          <img src="img/profile_pic.png" class="profile_pic" />
+          <p class="profile-name">
+            <%= current_user.name %> <%= current_user.lastname %>
+          </p>
+
+          <div class="stars">
+            <img src="img/star.png" class="star_size" />
+            <img src="img/star.png" class="star_size" />
+            <img src="img/star.png" class="star_size" />
+            <img src="img/star.png" class="star_size" />
+          </div>
+
+          <div class="boxes">
+            <button class="menu_boxes">Postings</button>
+            <button class="menu_boxes">Reviews</button>
+            <button class="menu_boxes">Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-posting-container">
+      <% posts.forEach(post => { %>
+      <div class="user-product-image">
+        <div class="user-row">
+          <div class="user-column">
+            <img
+              src="img/jeep_ad.jpg"
+              alt="Snow"
+              style="width: 100%;"
+              class="column-add-preview"
+            />
+            <div class="user-detail-container">
+              <p class="user-user"><%= post.title %></p>
+              <p class="user-price">Price: <%= post.price %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</main>
+
+<footer class="centered">
+  <div class="myTable">
+    <div class="craigslist-container">
+      <h4 class="footer-head">Craigslist</h4>
+      <br />
+      <a href="aboutus" class="text-my-own-color">About Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Careers</a><br />
+      <br />
+      <a href="aboutus" class="text-my-own-color">Contact Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Forum</a><br />
+    </div>
+    <div class="info-container">
+      <h4 class="footer-head">Info</h4>
+      <br />
+      <a href="termsandcondition" class="text-my-own-color"
+        >Terms & Conditions</a
+      ><br />
+      <br />
+      <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a
+      ><br />
+      <br />
+      <a href="events" class="text-my-own-color">Events</a><br />
+    </div>
+    <div class="support-container">
+      <h4 class="footer-head">Support</h4>
+      <br />
+      <a href="" class="text-my-own-color">Frauds</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Tips</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Q&A</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Setting</a><br />
+    </div>
+  </div>
+</footer>

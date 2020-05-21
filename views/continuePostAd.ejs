@@ -167,10 +167,157 @@
       <a href="" class="text-my-own-color">Setting</a><br />
     </div>
   </div>
+
+  <div id="preview">
+    <main>
+      <div class="post-ad-title">
+        <h4>Preview</h4>
+      </div>
+
+      <form class="preview-ad-form" action="/adPreview" method="POST">
+        <div class="preview-ad-main-container">
+          <div class="preview-container">
+            <div class="preview-section1">
+              <div class="product-image">
+                <h1><%= title %></h1>
+                <h4 class="location-title">
+                  <img src="img/marker_1.png" class="" />
+                  <%= location_id %>
+                </h4>
+                <div class="row">
+                  <div class="column">
+                    <img
+                      src="img/jeep_ad.jpg"
+                      alt="Snow"
+                      style="width: 100%;"
+                      class="column-add-preview"
+                    />
+                    <p class="price">Price: <%= price %></p>
+                  </div>
+                </div>
+                <!-- <img src="/img/office_space.jpeg" class="office-img"> -->
+              </div>
+              <div class="product-details">
+                <h1>Description</h1>
+                <p><%= description %></p>
+              </div>
+            </div>
+            <div class="preview-section2">
+              <div class="product-description">
+                <button class="favourite_button" type="submit">
+                  <div class="wrap">
+                    <img
+                      src="img/heart.png"
+                      height="20px"
+                      class="favourite_icon"
+                    />
+                    <div class="text">Favourite</div>
+                  </div>
+                </button>
+                <h1>Details</h1>
+                <p>Condition: <%= condition %></p>
+                <p>Method of Payment: <%= method_of_payment %></p>
+                <p>Method of Communication: <%= method_of_communication %></p>
+                <p>Negotiable: <%= negotiable %></p>
+                <!-- find a way to implement seller_id -->
+              </div>
+            </div>
+          </div>
+
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= location_id %>"
+            name="location_id"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= ad_id %>"
+            name="ad_id"
+          />
+          <!-- ad_id is for search function -->
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= item_category_id %>"
+            name="item_category_id"
+          />
+          <!-- item_category is for search function -->
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= title %>"
+            name="title"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= price %>"
+            name="price"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= condition %>"
+            name="condition"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= description %>"
+            name="description"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= picture %>"
+            name="picture"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= method_of_payment %>"
+            name="method_of_payment"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= method_of_communication %>"
+            name="method_of_communication"
+          />
+          <input
+            type="hidden"
+            class="form-control"
+            id="formGroupExampleInput"
+            value="<%= negotiable %>"
+            name="negotiable"
+          />
+
+          <div class="preview-container-buttons">
+            <button
+              type="button"
+              class="button-content-container"
+              onclick="history.back()"
+            >
+              Back
+            </button>
+            <button type="submit" class="button-content-container">
+              Post Ad
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
 </footer>
-<script>
-  //   $(".custom-file-input").on("change", function () {
-  //     var fileName = $(this).val().split("\\").pop();
-  //     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-  //   });
-</script>

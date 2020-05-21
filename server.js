@@ -164,25 +164,25 @@ app.post("/adPreview", isAuthenticated, function (req, res) {
     .catch((e) => console.log(e));
 });
 
-app.get("/selectionPage", isAuthenticated, function (req, res) {
-  getUserPost({ ...req.body, userId: req.user.id })
-    .then((result) => {
-      console.log("this is my result: ", result);
-      res.render("selectionPage.ejs", { user: result });
-    })
-    .catch((e) => console.log(e));
-});
-
 // app.get("/selectionPage", isAuthenticated, function (req, res) {
-//   mysqlConnection.getUserPost(
-//     { ...req.body, userId: req.user.id },
-//     (err, rows) => {
-//       err
-//         ? console.log(err)
-//         : res.render("myAccount", { posts: rows, current_user: req.user });
-//     }
-//   );
+//   getUserPost({ ...req.body, userId: req.user.id })
+//     .then((result) => {
+//       console.log("this is my result: ", result);
+//       res.render("selectionPage.ejs", { user: result });
+//     })
+//     .catch((e) => console.log(e));
 // });
+
+app.get("/selectionPage", isAuthenticated, function (req, res) {
+  mysqlConnection.getUserPost(
+    { ...req.body, userId: req.user.id },
+    (err, rows) => {
+      err
+        ? console.log(err)
+        : res.render("selectionPage", { posts: rows, current_user: req.user });
+    }
+  );
+});
 
 app.post("/selectionPage", isAuthenticated, function (req, res) {
   res.render("selectionPage.ejs", {
@@ -214,6 +214,10 @@ app.get("/myAccount", isAuthenticated, function (req, res) {
 
 app.get("/posts", function (req, res) {
   res.json(posts.filter((post) => post.username === req.user.name));
+});
+
+app.get("/product", function (req, res) {
+  res.render("product.ejs");
 });
 
 app.delete("/logout", function (req, res) {
