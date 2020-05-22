@@ -843,6 +843,10 @@ body {
     position: absolute;
     margin-bottom: 50px;
   }
+
+  .calendar {
+    display: none;
+  }
   .dot {
     display: none;
   }
