@@ -22,9 +22,6 @@
 </nav>
 
 <main>
-  <div class="post-ad-title">
-    <h4></h4>
-  </div>
   <div class="preview-container">
     <div class="preview-section1">
       <div class="product-image">
@@ -47,7 +44,7 @@
         </div>
       </div>
       <div class="product-details">
-        <h1>Description</h1>
+        <h1 class="post-ad-name">Description</h1>
         <p id="preview-description"><%= posts.description %></p>
       </div>
 
@@ -66,7 +63,7 @@
             <div class="text">Favourite</div>
           </div>
         </button>
-        <h1>Details</h1>
+        <h1 class="post-ad-name">Details</h1>
         <p>Condition: <%= posts.condition %></p>
         <p>Method of Payment: <%= posts.method_of_payment %></p>
         <p>Method of Communication: <%= posts.method_of_communication %></p>

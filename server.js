@@ -88,15 +88,15 @@ app.post("/signup", (req, res) => {
     .catch((e) => console.log(e));
 });
 
-app.get("/", isAuthenticated, function (req, res) {
+app.get("/", function (req, res) {
   res.render("homepage.ejs");
 });
 
-app.get("/aboutus", isAuthenticated, function (req, res) {
+app.get("/aboutus", function (req, res) {
   res.render("aboutus.ejs");
 });
 
-app.get("/termsandcondition", isAuthenticated, function (req, res) {
+app.get("/termsandcondition", function (req, res) {
   res.render("terms_and_condition.ejs");
 });
 

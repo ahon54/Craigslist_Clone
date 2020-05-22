@@ -523,6 +523,7 @@ body {
   padding: 5px;
   border-radius: 5px;
   margin: auto auto 30px auto;
+  border: none;
 }
 
 .see-more-text-container {
@@ -1075,6 +1076,7 @@ body {
     padding: 5px;
     border-radius: 5px;
     margin: auto auto 30px auto;
+    border: none;
   }
   .paragraph-container {
     display: block;
