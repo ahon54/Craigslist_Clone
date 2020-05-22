@@ -68,21 +68,21 @@ To run our program simply type (in terminal):
 npm run dev 
 ```
 
-or visit this link: [https://craigslist-redesign-clone.herokuapp.com/] 
+or visit this link: https://craigslist-redesign-clone.herokuapp.com/ 
 
 ## ⚙️ Built Using <a name= "built_using"></a>
 
-- Front End
- - EJS
- - HTML 5
- - CSS3
- - Bootstrap 4
- - jQuery
+* Front End
+ * EJS
+ * HTML 5
+ * CSS3
+ * Bootstrap 4
+ * jQuery
 
-- Back End
- - nodeJS
- - ExpressJS
- - JSON Web Token
+* Back End
+ * nodeJS
+ * ExpressJS
+ * JSON Web Token
 
 ## ✏️ Authors <a name= "authors"></a>
 
