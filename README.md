@@ -59,6 +59,11 @@ npm i
 
 ## 📊 Usage <a name = "usage"></a>
 
+Requirement
+
+* [google mySQL instance](https://cloud.google.com/sql/docs/mysql/create-instance)
+* [s3 Bucket for hosting images](https://aws.amazon.com/s3/)
+* [CloudFront](https://aws.amazon.com/cloudfront/)
 
 ## 🚀 Deployment <a name= "deployment"></a>
 
