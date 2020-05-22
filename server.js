@@ -105,6 +105,7 @@ app.get("/events", function (req, res) {
 });
 
 app.get("/postad", isAuthenticated, function (req, res) {
+  console.log(req.user);
   res.render("postad.ejs", { user: req.user });
 });
 
@@ -232,14 +233,15 @@ app.get("/posts", function (req, res) {
 
 app.get("/product/:post_id", function (req, res) {
   const post = req.params.post_id;
-  mysqlConnection.getPostbyId(post, (err, rows) => {
-    // err ? res.send(err) : res.send(rows);
+  mysqlConnection.getPostDetail(post, (err, rows) => {
+    console.log(req.user);
+    console.log(rows);
     err
       ? console.log(err)
-      : res.render("selectionPage", {
-          posts: rows,
+      : res.render("product", {
+          posts: rows[0],
           current_user: req.user,
-          user: req.user,
+          user: JSON.parse(rows[0].seller),
         });
   });
 });

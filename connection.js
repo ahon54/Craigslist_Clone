@@ -54,6 +54,14 @@ function getPostbyId(post_id, callback) {
   mysqlConnection.query(`select * from post where id = ?`, [post_id], callback);
 }
 
+function getPostDetail(post_id, cb) {
+  mysqlConnection.query(
+    `select * from all_user_post where id = ?`,
+    [post_id],
+    cb
+  );
+}
+
 module.exports = {
   mysqlConnection,
   getUsersSignUp,
@@ -62,4 +70,5 @@ module.exports = {
   createPost,
   getUserPost,
   getPostbyId,
+  getPostDetail,
 };

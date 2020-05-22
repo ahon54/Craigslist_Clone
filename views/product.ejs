@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="logo-container">
       <a href="/">
-        <img src="/img/logo.png" class="logo" alt="logo" />
+        <img src="/img/Logo.svg" class="logo" alt="logo" />
       </a>
     </div>
     <div class="nav-buttons">
@@ -25,8 +25,56 @@
   <div class="post-ad-title">
     <h4></h4>
   </div>
+  <div class="preview-container">
+    <div class="preview-section1">
+      <div class="product-image">
+        <h1 id="preview_title">
+          <%= posts.title %>
+        </h1>
+        <h4 class="location-title">
+          <img src="/img/marker_1.png" class="" />
+          <%= posts.location_id %>
+        </h4>
+        <div class="row">
+          <div class="column">
+            <img
+              src="<%= posts.picture %>"
+              style="width: 100%;"
+              class="column-add-preview"
+            />
+            <p class="price">Price: <span id="price"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="product-details">
+        <h1>Description</h1>
+        <p id="preview-description"><%= posts.description %></p>
+      </div>
 
-  <a href="selectionPage">
+      <div class="" style="border: 1px solid #000;">
+        <h1>Seller Information</h1>
+        <h4><%= user.username%></h4>
+        <h4><%= user.email %></h4>
+      </div>
+    </div>
+
+    <div class="preview-section2">
+      <div class="product-description">
+        <button class="favourite_button" type="submit">
+          <div class="wrap">
+            <img src="/img/heart.png" height="20px" class="favourite_icon" />
+            <div class="text">Favourite</div>
+          </div>
+        </button>
+        <h1>Details</h1>
+        <p>Condition: <%= posts.condition %></p>
+        <p>Method of Payment: <%= posts.method_of_payment %></p>
+        <p>Method of Communication: <%= posts.method_of_communication %></p>
+        <p>Negotiable: <%= posts.negotiable %></p>
+      </div>
+    </div>
+  </div>
+  <a href="/selectionPage">
     <div class="see-more-text-container">
       <button type="button" class="see-more-text">View more</button>
     </div>
