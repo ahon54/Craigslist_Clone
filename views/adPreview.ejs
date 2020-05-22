@@ -31,27 +31,25 @@
       <div class="preview-container">
         <div class="preview-section1">
           <div class="product-image">
-            <h1 id="preview_title"><%= title %></h1>
+            <h1 id="preview_title"></h1>
             <h4 class="location-title">
               <img src="img/marker_1.png" class="" />
-              <%= location_id %>
             </h4>
             <div class="row">
               <div class="column">
                 <img
-                  src="img/jeep_ad.jpg"
+                  id="preview_img"
                   alt="Snow"
                   style="width: 100%;"
                   class="column-add-preview"
                 />
-                <p class="price">Price: <%= price %></p>
+                <p class="price">Price: <span id="price"></span></p>
               </div>
             </div>
-            <!-- <img src="/img/office_space.jpeg" class="office-img"> -->
           </div>
           <div class="product-details">
             <h1>Description</h1>
-            <p id="preview-description"><%= description %></p>
+            <p id="preview-description"></p>
           </div>
         </div>
 

@@ -105,7 +105,7 @@ app.get("/events", function (req, res) {
 });
 
 app.get("/postad", isAuthenticated, function (req, res) {
-  res.render("postad.ejs");
+  res.render("postad.ejs", { user: req.user });
 });
 
 app.get("/continuePostAd", isAuthenticated, function (req, res) {
@@ -156,12 +156,22 @@ app.get("/adPreview", isAuthenticated, function (req, res) {
   });
 });
 
-app.post("/adPreview", isAuthenticated, function (req, res) {
-  createPost({ ...req.body, user_id: req.user.id })
-    .then((result) => {
-      res.redirect("/selectionPage");
-    })
-    .catch((e) => console.log(e));
+const aws = require("./uploadPhoto/aws.js");
+
+app.post("/adPreview", isAuthenticated, aws.upload.single("picture"), function (
+  req,
+  res
+) {
+  const image = `${process.env.CLOUDFRONT}${req.file.originalname}`;
+  const info = {
+    ...req.body,
+    user_id: req.user.id,
+    picture: image,
+  };
+  console.log(info);
+  mysqlConnection.createPost(info, (err, result) => {
+    err ? console.log(err) : res.redirect(`/product/${result.insertId}`);
+  });
 });
 
 // app.get("/selectionPage", isAuthenticated, function (req, res) {
@@ -207,7 +217,11 @@ app.get("/myAccount", isAuthenticated, function (req, res) {
     (err, rows) => {
       err
         ? console.log(err)
-        : res.render("myAccount", { posts: rows, current_user: req.user });
+        : res.render("myAccount", {
+            posts: rows,
+            current_user: req.user,
+            user: req.user,
+          });
     }
   );
 });
@@ -216,8 +230,18 @@ app.get("/posts", function (req, res) {
   res.json(posts.filter((post) => post.username === req.user.name));
 });
 
-app.get("/product", function (req, res) {
-  res.render("product.ejs");
+app.get("/product/:post_id", function (req, res) {
+  const post = req.params.post_id;
+  mysqlConnection.getPostbyId(post, (err, rows) => {
+    // err ? res.send(err) : res.send(rows);
+    err
+      ? console.log(err)
+      : res.render("selectionPage", {
+          posts: rows,
+          current_user: req.user,
+          user: req.user,
+        });
+  });
 });
 
 app.delete("/logout", function (req, res) {

@@ -41,30 +41,17 @@ function getUserName(name, callback) {
   mysqlConnection.query(sql, callback);
 }
 
-function createPost(
-  location_id,
-  ad_id,
-  item_category_id,
-  title,
-  price,
-  description,
-  condition,
-  picture,
-  method_of_payment,
-  method_of_communication,
-  negotiable,
-  user_id,
-  callback
-) {
-  const sql =
-    "INSERT into post (location_id, ad_id, item_category_id, title, price, `condition`, description, user_id, method_of_payment, method_of_communication, negotiable) VALUES " +
-    ` ("${location_id}","${ad_id}","${item_category_id}","${title}","${price}","${condition}","${description}",${user_id},"${method_of_payment}","${method_of_communication}","${negotiable}")`;
-  mysqlConnection.query(sql, callback);
+function createPost(info, callback) {
+  mysqlConnection.query(`insert into post set?`, info, callback);
 }
 
 function getUserPost(userId, callback) {
   const sql = `SELECT * FROM post WHERE user_id = "${userId.userId}"`;
   mysqlConnection.query(sql, callback);
+}
+
+function getPostbyId(post_id, callback) {
+  mysqlConnection.query(`select * from post where id = ?`, [post_id], callback);
 }
 
 module.exports = {
@@ -74,8 +61,5 @@ module.exports = {
   getUserLogin,
   createPost,
   getUserPost,
+  getPostbyId,
 };
-
-// mysqlConnection.query(`select * from users`, (err, row) => {
-//   err ? console.log(err) : console.log(row);
-// });

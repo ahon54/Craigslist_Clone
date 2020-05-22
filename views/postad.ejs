@@ -1,138 +1,306 @@
 <nav>
-    <div class="nav">
-        <div class="logo-container">
-          <a href="/">
-            <img src="/img/logo.png" class="logo" alt="logo">
-          </a>
-        </div>
-        <div class="nav-buttons">
-            <form action="myAccount">
-              <button class="account_button" type="submit"> 
-                  <div class="wrap"> 
-                      <img src="/img/profile.png" class="account"> 
-                      <div class="text"> My Account </div>
-                  </div>
-              </button>
-            </form>
-            <form action="postad">
-              <input type="submit" value="Post an Ad" class="post_add">
-            </form>
-        </div>
+  <div class="nav">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/img/logo.png" class="logo" alt="logo" />
+      </a>
     </div>
+    <div class="nav-buttons">
+      <form action="myAccount">
+        <button class="account_button" type="submit">
+          <div class="wrap">
+            <img src="/img/profile.png" class="account" />
+            <div class="text">My Account</div>
+          </div>
+        </button>
+      </form>
+      <form action="postad">
+        <input type="submit" value="Post an Ad" class="post_add" />
+      </form>
+    </div>
+  </div>
 </nav>
 
 <main>
-    <div class="post-ad-title">
-        <h4> Post an Ad </h4>
-    </div>
-    <form class="ad-form" action="/continuePostAd" method="GET">
+  <div class="post-ad-title">
+    <h4>Post an Ad</h4>
+  </div>
+
+  <div id="main-post-ad-container">
     <div class="post-ad-container">
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Location</label>
-                <select class="custom-select" name="location_id" required>
-                    <option selected>Province</option>
-                    <option value="Canada">Canada</option>
-                    <option value="US">United States</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">What kind of ad are you posting?</label>
-                <select class="custom-select" name="ad_id" required>
-                    <option selected>Type of Ad</option>
-                    <option value="Business">Business</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">What are you selling?</label>
-                <select class="custom-select" name="item_category_id" required>
-                    <option selected>Category</option>
-                    <option value="Jewelry">Jewelry</option>
-                    <option value="House">House</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Cell Phone">Cell Phone</option>
-                    <option value="Food">Food</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">What is the condition?</label>
-                <select class="custom-select" name="condition" required>
-                    <option selected>Category</option>
-                    <option value="Very Good">Very Good</option>
-                    <option value="Good">Good</option>
-                    <option value="Bad">Bad</option>
-                    <option value="Very Bad">Very Bad</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Prefer method of payment?</label>
-                <select class="custom-select" name="method_of_payment" required>
-                    <option selected>Category</option>
-                    <option value="Cash">Cash</option>
-                    <option value="Cheque">Cheque</option>
-                    <option value="E-transfer">E-transfer</option>
-                    <option value="Cryptocurrency">cryptocurrency</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Best way of communication?</label>
-                <select class="custom-select" name="method_of_communication" required>
-                    <option selected>Category</option>
-                    <option value="Message on craigslist">Message on craigslist</option>
-                    <option value="Phone">Phone</option>
-                    <option value="E-mail">E-mail</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Negotiable?</label>
-                <select class="custom-select" name="negotiable" required>
-                    <option selected>Category</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-    </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Location</label>
+        <select
+          class="custom-select"
+          name="location_id"
+          required
+          form="preview-form"
+        >
+          <option selected>Country</option>
+          <option value="Canada">Canada</option>
+          <option value="US">United States</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1"
+          >What kind of ad are you posting?</label
+        >
+        <select class="custom-select" name="ad_id" required form="preview-form">
+          <option selected>Type of Ad</option>
+          <option value="Business">Business</option>
+          <option value="Personal">Personal</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">What are you selling?</label>
+        <select
+          class="custom-select"
+          name="item_category_id"
+          required
+          form="preview-form"
+        >
+          <option selected>Category</option>
+          <option value="Jewelry">Jewelry</option>
+          <option value="House">House</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Cell Phone">Cell Phone</option>
+          <option value="Food">Food</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">What is the condition?</label>
+        <select
+          class="custom-select"
+          name="condition"
+          required
+          form="preview-form"
+        >
+          <option selected>Category</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Good">Good</option>
+          <option value="Bad">Bad</option>
+          <option value="Very Bad">Very Bad</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Prefer method of payment?</label>
+        <select
+          class="custom-select"
+          name="method_of_payment"
+          required
+          form="preview-form"
+        >
+          <option selected>Category</option>
+          <option value="Cash">Cash</option>
+          <option value="Cheque">Cheque</option>
+          <option value="E-transfer">E-transfer</option>
+          <option value="Cryptocurrency">cryptocurrency</option>
+        </select>
+      </div>
 
-    <div class="continue-button-container">
-            <button type="submit" class="continue-button">Continue</button>
-    </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1"
+          >Best way of communication?</label
+        >
+        <select
+          class="custom-select"
+          name="method_of_communication"
+          required
+          form="preview-form"
+        >
+          <option selected>Category</option>
+          <option value="Message on craigslist">Message on craigslist</option>
+          <option value="Phone">Phone</option>
+          <option value="E-mail">E-mail</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Negotiable?</label>
+        <select
+          class="custom-select"
+          name="negotiable"
+          required
+          form="preview-form"
+        >
+          <option selected>Category</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
 
+      <div class="continue-button-container">
+        <button type="submit" class="continue-button" id="c-btn">
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="second-post-ad-container" style="display: none;">
+    <div class="post-ad-container">
+      <div class="form-group">
+        <label for="p-title"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="p-title"
+          placeholder="Title"
+          name="title"
+          form="preview-form"
+        />
+      </div>
+      <div class="form-group">
+        <label for="p-price"></label>
+        <input
+          type="text"
+          class="form-control"
+          id="p-price"
+          placeholder="$ Price"
+          name="price"
+          form="preview-form"
+        />
+      </div>
+      <div class="form-group">
+        <label for="p-description"></label>
+        <textarea
+          class="form-control"
+          id="p-description"
+          rows="3"
+          placeholder="Description"
+          name="description"
+          form="preview-form"
+        ></textarea>
+      </div>
+      <div class="upload-container">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            id="customFile"
+            name="picture"
+            form="preview-form"
+            multiple
+          />
+          <label class="custom-file-label" for="customFile">Upload Image</label>
+        </div>
+      </div>
+      <div class="continue-button-container1">
+        <button id="back-btn" class="button-content-container">
+          Back
+        </button>
+        <button type="submit" class="continue-button" id="p-btn">
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="preview-section" style="display: none;">
+    <form
+      id="preview-form"
+      class="preview-ad-form"
+      action="/adPreview"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div class="preview-ad-main-container">
+        <div class="preview-container">
+          <div class="preview-section1">
+            <div class="product-image">
+              <h1 id="preview_title"></h1>
+              <h4 id="preview_location_id"></h4>
+              <div class="row">
+                <div class="column">
+                  <img
+                    id="preview_img"
+                    src=""
+                    alt="Snow"
+                    style="width: 100%;"
+                    class="column-add-preview"
+                  />
+                  <p class="price">Price: <span id="preview_price"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="product-details">
+              <h1>Description</h1>
+              <p id="preview_Description"></p>
+            </div>
+          </div>
+
+          <div class="preview-section2">
+            <div class="product-description">
+              <button class="favourite_button" type="submit">
+                <div class="wrap">
+                  <img
+                    src="img/heart.png"
+                    height="20px"
+                    class="favourite_icon"
+                  />
+                  <div class="text">Favourite</div>
+                </div>
+              </button>
+              <h1>Details</h1>
+              <p>Condition: <span id="preview_condition"></span></p>
+              <p>Method of Payment: <span id="preview_payment"></span></p>
+              <p>
+                Method of Communication:
+                <span id="preview_communication"></span>
+              </p>
+              <p>Negotiable: <span id="preview_Negotiable"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-container-buttons">
+          <button id="back-btn2" class="button-content-container">
+            Back
+          </button>
+          <button type="submit" class="button-content-container">
+            Post Ad
+          </button>
+        </div>
+      </div>
     </form>
+  </div>
 </main>
 
 <footer class="centered">
-    <div class="myTable">
-        <div class="craigslist-container">
-            <h4 class="footer-head">Craigslist</h4>
-                <br>
-                <a href="aboutus" class="text-my-own-color" >About Us</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Careers</a><br>
-                <br>
-                <a href="aboutus" class="text-my-own-color">Contact Us</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Forum</a><br>
-        </div>
-        <div class="info-container">
-            <h4 class="footer-head">Info</h4>
-                <br>
-                <a href="termsandcondition" class="text-my-own-color">Terms & Conditions</a><br>
-                <br>
-                <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a><br>
-                <br>
-                <a href="events" class="text-my-own-color">Events</a><br>
-        </div>
-        <div class="support-container">
-            <h4 class="footer-head">Support</h4>
-                <br>
-                <a href="" class="text-my-own-color">Frauds</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Tips</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Q&A</a><br>
-                <br>
-                <a href="" class="text-my-own-color">Setting</a><br>
-        </div>
+  <div class="myTable">
+    <div class="craigslist-container">
+      <h4 class="footer-head">Craigslist</h4>
+      <br />
+      <a href="aboutus" class="text-my-own-color">About Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Careers</a><br />
+      <br />
+      <a href="aboutus" class="text-my-own-color">Contact Us</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Forum</a><br />
     </div>
+    <div class="info-container">
+      <h4 class="footer-head">Info</h4>
+      <br />
+      <a href="termsandcondition" class="text-my-own-color"
+        >Terms & Conditions</a
+      ><br />
+      <br />
+      <a href="termsandcondition" class="text-my-own-color">Privacy Policy</a
+      ><br />
+      <br />
+      <a href="events" class="text-my-own-color">Events</a><br />
+    </div>
+    <div class="support-container">
+      <h4 class="footer-head">Support</h4>
+      <br />
+      <a href="" class="text-my-own-color">Frauds</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Tips</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Q&A</a><br />
+      <br />
+      <a href="" class="text-my-own-color">Setting</a><br />
+    </div>
+  </div>
 </footer>
