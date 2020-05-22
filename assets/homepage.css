@@ -11,6 +11,7 @@ body {
   width: 100%;
   text-align: center;
   align-self: center;
+  font-size: 20px;
 }
 
 .header-dots {
@@ -534,6 +535,7 @@ body {
   margin-right: 20px;
   border-radius: 5px;
   height: 100%;
+  border: none;
 }
 
 .wrap {
@@ -560,6 +562,7 @@ body {
   border-radius: 5px;
   padding-left: 25px;
   padding-right: 25px;
+  border: none;
 }
 
 .feature-listing {
@@ -714,6 +717,10 @@ body {
     margin-bottom: 50px;
   }
 
+  .main-header {
+    font-size: 15px;
+  }
+
   .list-text {
     font-size: 10px !important;
   }
@@ -767,8 +774,10 @@ body {
 
   .sub-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px;
+    padding-left: 10px !important;
+    padding-right: 15px !important;
   }
 
   .account {
@@ -787,6 +796,7 @@ body {
     padding-left: 5px;
     margin-right: 5px;
     height: 100%;
+    border: none;
   }
 
   .post_add {
@@ -799,6 +809,7 @@ body {
     border-radius: 5px;
     padding-left: 25px;
     padding-right: 25px;
+    border: none;
   }
 
   .wrap {
