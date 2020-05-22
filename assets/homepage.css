@@ -190,10 +190,6 @@ body {
   margin-bottom: 25px;
 }
 
-.user-whole-posting-container {
-  margin-left: 80px;
-}
-
 .user-account-posting-container {
   width: 100%;
   display: flex;
@@ -399,12 +395,16 @@ body {
   flex-direction: column;
   width: 50%;
 }
-
+.user-whole-posting-container {
+  width: 12%;
+}
 .post-ad-title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 20px;
-  padding-left: 120px;
+  padding-left: 45px;
+  width: 15%;
+  text-align: center;
 }
 
 .post-ad-container {
@@ -1137,6 +1137,8 @@ body {
     display: flex;
     justify-content: flex-start;
     padding: 20px;
+    padding-left: 0px;
+    width: 100%;
   }
   .post-ad-container {
     display: flex;
@@ -1324,6 +1326,8 @@ body {
     justify-content: center;
     padding: 10px;
     margin-left: 0px;
+    width: 40%;
+    height: 550px;
   }
 
   .user-account-posting-container {
@@ -1331,7 +1335,7 @@ body {
   }
 
   .user-posting-container {
-    width: 100%;
+    width: 50%;
     padding: 5px;
     display: flex;
     justify-content: space-around;
@@ -1374,7 +1378,7 @@ body {
   }
 
   .user-product-image {
-    width: 40%;
+    width: 80%;
     height: auto;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1382,6 +1386,7 @@ body {
     height: 180px;
     margin-bottom: 15px;
   }
+
   .user-detail-container {
     display: flex;
     flex-direction: column;
