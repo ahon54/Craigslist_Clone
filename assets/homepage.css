@@ -843,6 +843,9 @@ body {
     position: absolute;
     margin-bottom: 50px;
   }
+  .section-title {
+    display: none;
+  }
 
   .calendar {
     display: none;
