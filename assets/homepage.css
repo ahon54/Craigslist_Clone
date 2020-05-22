@@ -68,7 +68,7 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 48px;
 }
 
@@ -201,6 +201,10 @@ body {
 
 /*    Ad Preview     */
 
+.post-ad-name {
+  font-size: 24px;
+}
+
 .column .column-add-preview {
   height: 400px;
 }
@@ -228,7 +232,7 @@ body {
   color: white;
 }
 
-/*    My Accoount    */
+/*    My Account    */
 
 .profile-container {
   width: 100%;
@@ -294,6 +298,10 @@ body {
 
 /*    Ad Preview    */
 
+.user-details {
+  margin-top: 60px;
+}
+
 .preview-ad-form {
   display: flex;
   justify-content: space-evenly;
@@ -336,7 +344,7 @@ body {
 
 .preview-section2 {
   display: flex;
-  align-self: center;
+  align-self: flex-start;
 }
 
 /*    post ad continue */
@@ -359,6 +367,17 @@ body {
 }
 
 /*     post ad     */
+.location_tag {
+  width: 25px;
+  height: 25px;
+}
+
+.location-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #999999;
+}
 .preview-section1 {
   display: flex;
   justify-content: space-evenly;
@@ -775,7 +794,7 @@ body {
   }
 
   .feature-list {
-    font-size: 25px;
+    font-size: 20px;
   }
   .sub-nav {
     display: flex;
@@ -1049,6 +1068,15 @@ body {
 
   /*       post ad        */
 
+  .preview-section2 {
+    display: flex;
+    align-self: center;
+  }
+
+  .user-details {
+    margin-top: 20px;
+  }
+
   .favourite_button {
     background-color: #ee7074;
     color: white;
@@ -1122,6 +1150,10 @@ body {
 
   /*      Ad Preview        */
 
+  .post-ad-name {
+    font-size: 18px;
+  }
+
   .preview-ad-form {
     display: flex;
     justify-content: space-evenly;
@@ -1190,6 +1222,10 @@ body {
   }
 
   .column .column-add {
+    height: 100px;
+  }
+
+  .column .column-add-preview {
     height: 100px;
   }
 

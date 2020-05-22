@@ -23,7 +23,7 @@
 
 <main>
   <div class="post-ad-title">
-    <h1>Post an Ad</h1>
+    <h1 class="post-ad-name">Post an Ad</h1>
   </div>
 
   <div id="main-post-ad-container">
@@ -209,13 +209,15 @@
           <div class="preview-section1">
             <div class="product-image">
               <h1 id="preview_title"></h1>
-              <h4 id="preview_location_id"></h4>
+              <div class="location-title-container">
+                <img src="/img/marker_1.png" class="location_tag" />
+                <h4 id="preview_location_id"></h4>
+              </div>
               <div class="row">
                 <div class="column">
                   <img
                     id="preview_img"
                     src=""
-                    alt="Snow"
                     style="width: 100%;"
                     class="column-add-preview"
                   />
@@ -224,8 +226,15 @@
               </div>
             </div>
             <div class="product-details">
-              <h1>Description</h1>
+              <h1 class="post-ad-name">Description</h1>
               <p id="preview_Description"></p>
+            </div>
+            <div class="user-details">
+              <div id="user_info">
+                <h1 class="post-ad-name">Seller Information</h1>
+                <h4>Name: <%= user.name %> <%= user.lastname %></h4>
+                <h4>Email: <%= user.email %></h4>
+              </div>
             </div>
           </div>
 
@@ -241,7 +250,7 @@
                   <div class="text">Favourite</div>
                 </div>
               </button>
-              <h1>Details</h1>
+              <h1 class="post-ad-name">Details</h1>
               <p>Condition: <span id="preview_condition"></span></p>
               <p>Method of Payment: <span id="preview_payment"></span></p>
               <p>
@@ -263,10 +272,6 @@
         </div>
       </div>
     </form>
-    <div id="user_info">
-      <h4><%= user.name %> <%= user.lastname %></h4>
-      <h4><%= user.email %></h4>
-    </div>
   </div>
 </main>
 
