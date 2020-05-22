@@ -6,6 +6,20 @@ body {
 
 /*      Homepage         */
 
+.feature-row {
+  align-items: center;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 43.45px;
+  height: 43.45px;
+}
+
 .main-header {
   color: white;
   width: 100%;
@@ -162,7 +176,7 @@ body {
 .user-product-selection-image {
   width: 20%;
   border-radius: 4px;
-  height: 260px;
+  height: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px;
 }
@@ -173,6 +187,7 @@ body {
   height: 180px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 5px;
+  margin-bottom: 25px;
 }
 
 .user-whole-posting-container {
@@ -589,7 +604,7 @@ body {
 .feature-listing {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  padding: 100px;
+  padding: 60px;
 }
 
 .feature-container > * {
@@ -736,6 +751,9 @@ body {
     font-family: "Roboto", sans-serif;
     position: absolute;
     margin-bottom: 50px;
+  }
+  .dot {
+    display: none;
   }
 
   .main-header {
@@ -1068,6 +1086,14 @@ body {
 
   /*       post ad        */
 
+  .user-product-selection-image {
+    width: 40%;
+    border-radius: 4px;
+    height: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+  }
+
   .preview-section2 {
     display: flex;
     align-self: center;
@@ -1306,7 +1332,7 @@ body {
     width: 100%;
     padding: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     height: auto;
   }
@@ -1346,12 +1372,13 @@ body {
   }
 
   .user-product-image {
-    width: 45%;
+    width: 40%;
     height: auto;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 5px;
     height: 180px;
+    margin-bottom: 15px;
   }
   .user-detail-container {
     display: flex;

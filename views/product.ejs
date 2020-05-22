@@ -51,10 +51,10 @@
         <p id="preview-description"><%= posts.description %></p>
       </div>
 
-      <div class="" style="border: 1px solid #000;">
-        <h1>Seller Information</h1>
-        <h4><%= user.username%></h4>
-        <h4><%= user.email %></h4>
+      <div id="user_info">
+        <h1 class="post-ad-name">Seller Information</h1>
+        <h6>Name: <%= user.name %> <%= user.lastname %></h6>
+        <h6>Email: <%= user.email %></h6>
       </div>
     </div>
 
