@@ -66,6 +66,7 @@
           <option value="Clothing">Clothing</option>
           <option value="Cell Phone">Cell Phone</option>
           <option value="Food">Food</option>
+          <option value="Car">Car</option>
         </select>
       </div>
       <div class="form-group">
@@ -232,8 +233,16 @@
             <div class="user-details">
               <div id="user_info">
                 <h1 class="post-ad-name">Seller Information</h1>
-                <h6>Name: <%= user.name %> <%= user.lastname %></h6>
-                <h6>Email: <%= user.email %></h6>
+                <p class="user-name">
+                  Name: <%= user.name %> <%= user.lastname %>
+                </p>
+                <div class="stars">
+                  <img src="img/star.png" class="star_size" />
+                  <img src="img/star.png" class="star_size" />
+                  <img src="img/star.png" class="star_size" />
+                  <img src="img/star.png" class="star_size" />
+                </div>
+                <p>Email: <%= user.email %></p>
               </div>
             </div>
           </div>
@@ -251,13 +260,19 @@
                 </div>
               </button>
               <h1 class="post-ad-name">Details</h1>
-              <p>Condition: <span id="preview_condition"></span></p>
-              <p>Method of Payment: <span id="preview_payment"></span></p>
-              <p>
+              <p class="product-description">
+                Condition: <span id="preview_condition"></span>
+              </p>
+              <p class="product-description">
+                Method of Payment: <span id="preview_payment"></span>
+              </p>
+              <p class="product-description">
                 Method of Communication:
                 <span id="preview_communication"></span>
               </p>
-              <p>Negotiable: <span id="preview_Negotiable"></span></p>
+              <p class="product-description">
+                Negotiable: <span id="preview_Negotiable"></span>
+              </p>
             </div>
           </div>
         </div>
