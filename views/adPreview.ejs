@@ -1,22 +1,53 @@
 <nav>
-  <div class="nav">
-    <div class="logo-container">
-      <a href="/">
-        <img src="/img/logo.png" class="logo" alt="logo" />
-      </a>
+    <div class="nav">
+      <div class="logo-container">
+        <a href="/">
+          <img src="/img/craigslist.png" class="logo" alt="logo" />
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <form action="/myAccount" method="GET">
+          <button class="account_button" type="submit">
+            <div class="wrap">
+              <img src="/img/profile.png" class="account" />
+              <div class="text">My Account</div>
+            </div>
+          </button>
+        </form>
+        <form action="postad">
+          <input type="submit" value="Post an Ad" class="post_add" />
+        </form>
+      </div>
     </div>
-    <div class="nav-buttons">
-      <form action="myAccount">
-        <button class="account_button" type="submit">
-          <div class="wrap">
-            <img src="/img/profile.png" class="account" />
-            <div class="text">My Account</div>
-          </div>
+  </nav>
+
+  <div class="sub-nav">
+    <div class="form-input">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </div>
+    <div class="dropdown-container">
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Country
         </button>
-      </form>
-      <form action="postad">
-        <input type="submit" value="Post an Ad" class="post_add" />
-      </form>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Canada</a>
+          <a class="dropdown-item" href="#">United States</a>
+          <a class="dropdown-item" href="#">Mexico</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
