@@ -6,6 +6,12 @@ body {
 }
 
 /*      Homepage         */
+.container-1 {
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
 
 .product-description {
   font-size: 1.25em;
@@ -124,6 +130,7 @@ body {
 }
 .section-title {
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 /*    Selection Page    */
